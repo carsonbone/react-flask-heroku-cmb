@@ -15,7 +15,8 @@ app = Flask(__name__, static_folder="frontend/build", static_url_path="")
 def result():
 	return tempname
 	#get the input from request json
-	tempname = request.json
+	temp1 = json.load(request.json)
+	tempname = temp1['name']
 	print(tempname)
 	#if it's my name, return my last name
 	#else, return user not found
