@@ -33,14 +33,11 @@ export default class InputComponent extends React.Component {
         console.log('Name submitted: ' + this.state.value);
         fetch("/result", {
             method: "POST",
-            cache: "no-cache",
-            headers: {
-                "content_type": "application/json",
-            },
-            body: JSON.stringify(this.state.value )
+            cache: "default",
+            headers: {"Content_Type": "application/json",},
+            body: JSON.stringify({ name: this.state.value })
         }
         ).then(response => {
-            console.log(response.json())
             return response.json()
         })
             .then(json => {
