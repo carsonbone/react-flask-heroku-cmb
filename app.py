@@ -16,9 +16,9 @@ def result():
 	
 	#get the input from request json
 	temp1 = request.json
+	console.log(temp1)
 	return jsonify("lastname:" + temp1)
-	tempname = temp1['name']
-	print(tempname)
+	#tempname = temp1['name']
 	#if it's my name, return my last name
 	#else, return user not found
 	if tempname == "Carson" or tempname == "carson":
