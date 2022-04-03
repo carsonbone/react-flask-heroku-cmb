@@ -43,8 +43,7 @@ export default class InputComponent extends React.Component {
             return response.json()
         })
             .then(json => {
-                console.log(json)
-               // this.setState({ response: json })
+                this.setState({ response: json[0] })
             })
     }
 
