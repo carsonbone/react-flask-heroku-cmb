@@ -36,14 +36,15 @@ export default class InputComponent extends React.Component {
             cache: "default",
             headers: {
                 "Content_Type": "application/json",
-                'Accept': 'application/json'},
-            body: JSON.stringify( this.state.value )
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({name: this.state.value })
         }
         ).then(response => {
             return response.json()
         })
             .then(json => {
-                this.setState({ response: json[0] })
+                this.setState({ response: json })
             })
     }
 
