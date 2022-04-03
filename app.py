@@ -16,7 +16,7 @@ def result():
 	
 	#get the input from request json
 	temp1 = request.json
-	return jsonify(temp1)
+	return temp1
 	tempname = temp1['name']
 	print(tempname)
 	#if it's my name, return my last name
