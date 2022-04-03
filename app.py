@@ -13,7 +13,6 @@ app = Flask(__name__, static_folder="frontend/build", static_url_path="")
 
 @app.route('/result', methods = ['POST'])
 def result():
-	return tempname
 	#get the input from request json
 	temp1 = json.load(request.json)
 	tempname = temp1['name']
