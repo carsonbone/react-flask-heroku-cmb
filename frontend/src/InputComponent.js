@@ -38,7 +38,7 @@ export default class InputComponent extends React.Component {
                 "Content_Type": "application/json",
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(this.state.value )
+            body: JSON.stringify(this.state.value)
         }
         ).then(response => {
             return response.json()
