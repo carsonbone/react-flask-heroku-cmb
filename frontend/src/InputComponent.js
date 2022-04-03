@@ -40,7 +40,6 @@ export default class InputComponent extends React.Component {
             body: JSON.stringify( this.state.value )
         }
         ).then(response => {
-            console.log(response.json())
             return response.json()
         })
             .then(json => {
