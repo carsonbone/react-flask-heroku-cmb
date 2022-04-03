@@ -16,6 +16,7 @@ def result():
 	
 	#get the input from request json
 	temp1 = request.json
+	tempname = str(temp1['name'][0])
 	tempname = temp1['name']
 	#if it's my name, return my last name
 	#else, return user not found
