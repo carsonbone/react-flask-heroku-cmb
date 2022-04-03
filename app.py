@@ -1,11 +1,11 @@
 from flask import Flask, jsonify
 from flask.helpers import send_from_directory
 from flask import request
-#from flask_cors import CORS
+from flask_cors import CORS
 
 app = Flask(__name__, static_folder="frontend/build", static_url_path="")
 
-#CORS(app)
+CORS(app)
 
 
 
@@ -15,7 +15,7 @@ app = Flask(__name__, static_folder="frontend/build", static_url_path="")
 def result():
 	
 	#get the input from request json
-	tempname = str(request.json)
+	tempname = request.json
 	#if it's my name, return my last name
 	#else, return user not found
 	if tempname == "Carson" or tempname == "carson":
