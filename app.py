@@ -24,6 +24,9 @@ def result():
 		output = "User Not Found"
 	return jsonify(output)
 
+@app.route("/")
+def index():
+    return send_from_directory(app.static_folder, "index.html")
 
 if __name__ == "__main__":
-	app.run(debug=True, host="0.0.0.0")
+	app.run(host="0.0.0.0")
